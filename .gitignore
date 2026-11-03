@@ -1,2 +1,25 @@
+# IDE & AI Tool folders
+.agents/
+.claude/
+.windsurf/
+.vscode/
+.idea/
+
 # trash
 *.bkp
+
+# Dependencies
+node_modules/
+
+# Environment variables & secrets
+.env
+
+# Build outputs & caches
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# OS metadata
+.DS_Store
+Thumbs.db
