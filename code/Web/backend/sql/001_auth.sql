@@ -11,3 +11,6 @@ CREATE TABLE IF NOT EXISTS password_resets (
  token_hash TEXT PRIMARY KEY, user_id UUID NOT NULL REFERENCES users(id) ON DELETE CASCADE, expires_at TIMESTAMPTZ NOT NULL
 );
 CREATE INDEX IF NOT EXISTS resets_user_idx ON password_resets(user_id);
+ALTER TABLE password_resets ADD COLUMN IF NOT EXISTS request_name TEXT;
+ALTER TABLE password_resets ADD COLUMN IF NOT EXISTS request_phone TEXT;
+ALTER TABLE password_resets ADD COLUMN IF NOT EXISTS request_account_id TEXT;

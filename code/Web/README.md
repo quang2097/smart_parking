@@ -23,6 +23,10 @@ Seed settings in `.env` do not create an account automatically. Run `npm run use
 
 ## Forgot password
 
+Staff and customers submit their registered full name, contact phone number, and account ID alongside their email. The current account ID is the UUID shown on the signed-in account screen. The server matches the name and ID before issuing a link and stores the submitted details with the expiring reset request. Phone numbers are collected for contact, not verified against a profile (the current user model has no phone field). Administrators can select “Tôi là quản trị viên” to use email only; the server checks their stored role, so selecting this option cannot exempt a non-admin. Recovery continues through the email link; administrator approval is not required.
+
+Re-run `npm run db:migrate` in `backend` when updating an existing installation to add the reset request fields without deleting data.
+
 Configure `SMTP_HOST`, `SMTP_PORT`, `SMTP_FROM` and, if needed, `SMTP_USER` / `SMTP_PASS`. In development without SMTP, reset links appear **only in the backend terminal**, allowing the entire recovery flow to be exercised locally. The API never returns reset tokens. Links expire after 15 minutes and can be used once. Resetting a password revokes all sessions and all outstanding reset links for that account. Unknown emails receive the same public response as registered emails.
 
 ## API
@@ -32,7 +36,7 @@ Configure `SMTP_HOST`, `SMTP_PORT`, `SMTP_FROM` and, if needed, `SMTP_USER` / `S
 | POST   | `/api/auth/login`           | `{email,password,remember?:boolean}`; sets HttpOnly cookie and returns public user fields |
 | GET    | `/api/auth/me`              | Returns current user or 401                                                               |
 | POST   | `/api/auth/logout`          | Deletes session and clears cookie                                                         |
-| POST   | `/api/auth/forgot-password` | `{email}`; requests reset link                                                            |
+| POST   | `/api/auth/forgot-password` | `{email,name,phone,accountId}` (admins: `{email}`); requests reset link                                                            |
 | POST   | `/api/auth/reset-password`  | `{token,password}`; consumes reset link                                                   |
 | GET    | `/api/health`               | Checks PostgreSQL connectivity                                                            |
 

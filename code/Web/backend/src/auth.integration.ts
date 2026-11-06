@@ -37,6 +37,20 @@ test("PostgreSQL authentication lifecycle", async () => {
       [id, email, "Integration test", "staff", await hashPassword(password)],
     );
     assert.equal((await request("me")).status, 401);
+    const recovery = { email, name: "Integration test", phone: "0901234567", accountId: id };
+    assert.equal((await request("forgot-password", { email, role: "admin" })).status, 400);
+    assert.equal((await request("forgot-password", { ...recovery, phone: "bad" })).status, 400);
+    assert.equal((await request("forgot-password", { ...recovery, accountId: randomUUID() })).status, 200);
+    assert.equal((await pool.query("SELECT * FROM password_resets WHERE user_id=$1", [id])).rowCount, 0);
+    assert.equal((await request("forgot-password", recovery)).status, 200);
+    const recoveryRow = (await pool.query("SELECT request_name,request_phone,request_account_id FROM password_resets WHERE user_id=$1", [id])).rows[0];
+    assert.deepEqual(recoveryRow, { request_name: recovery.name, request_phone: recovery.phone, request_account_id: id });
+    await pool.query("DELETE FROM password_resets WHERE user_id=$1", [id]);
+    await pool.query("UPDATE users SET role='admin' WHERE id=$1", [id]);
+    assert.equal((await request("forgot-password", { email })).status, 200);
+    assert.equal((await pool.query("SELECT request_phone FROM password_resets WHERE user_id=$1", [id])).rows[0].request_phone, null);
+    await pool.query("DELETE FROM password_resets WHERE user_id=$1", [id]);
+    await pool.query("UPDATE users SET role='staff' WHERE id=$1", [id]);
     assert.equal((await login("wrong password")).status, 401);
     assert.equal(
       (await request("login", { email: "' OR 1=1 --", password })).status,

@@ -282,7 +282,8 @@ h2 {
   color: #7c8780;
   margin: 0 0 32px;
 }
-form > label {
+form > label,
+#recovery-identity > label {
   display: block;
   font-weight: 500;
   font-size: 11px;

@@ -186,20 +186,33 @@ app.post("/api/auth/logout", async (req, res) => {
   res.clearCookie(cookieName, cookieOptions).status(204).end();
 });
 app.post("/api/auth/forgot-password", limiter, async (req, res) => {
-  const { email } = req.body ?? {};
+  const { email, name, phone, accountId } = req.body ?? {};
   if (!validEmail(email)) {
     res.status(400).json({ message: "Vui lòng nhập email hợp lệ." });
     return;
   }
   const { rows } = await pool.query(
-    "SELECT id,email FROM users WHERE email=$1 AND active=true",
+    "SELECT id,email,name,role FROM users WHERE email=$1 AND active=true",
     [email.trim().toLowerCase()],
   );
-  if (rows[0]) {
+  const user = rows[0];
+  const identityValid =
+    typeof name === "string" && name.trim().length > 0 && name.length <= 200 &&
+    typeof phone === "string" && /^[+\d][\d ().-]{6,24}$/.test(phone.trim()) &&
+    typeof accountId === "string" && accountId.trim().length > 0 && accountId.length <= 100;
+  // A client-side admin checkbox never grants the exemption.
+  if (user?.role !== "admin" && !identityValid) {
+    res.status(400).json({ message: "Vui lòng nhập họ tên, số điện thoại và mã tài khoản hợp lệ. Quản trị viên được miễn các thông tin này." });
+    return;
+  }
+  const identityMatches = user && identityValid &&
+    name.trim().normalize("NFC").toLocaleLowerCase("vi") === user.name.trim().normalize("NFC").toLocaleLowerCase("vi") &&
+    accountId.trim().toLowerCase() === user.id.toLowerCase();
+  if (user && (user.role === "admin" || identityMatches)) {
     const token = newToken();
     await pool.query(
-      "INSERT INTO password_resets(token_hash,user_id,expires_at) VALUES($1,$2,now()+interval '15 minutes')",
-      [digest(token), rows[0].id],
+      "INSERT INTO password_resets(token_hash,user_id,expires_at,request_name,request_phone,request_account_id) VALUES($1,$2,now()+interval '15 minutes',$3,$4,$5)",
+      [digest(token), user.id, user.role === "admin" ? null : name.trim(), user.role === "admin" ? null : phone.trim(), user.role === "admin" ? null : accountId.trim()],
     );
     const url = new URL("/reset-password", appUrl);
     url.searchParams.set("token", token);
@@ -221,7 +234,7 @@ app.post("/api/auth/forgot-password", limiter, async (req, res) => {
   }
   res.json({
     message:
-      "Nếu email đã được đăng ký, bạn sẽ nhận được liên kết đặt lại mật khẩu.",
+      "Nếu thông tin khớp với tài khoản đã đăng ký, bạn sẽ nhận được liên kết đặt lại mật khẩu.",
   });
 });
 app.post("/api/auth/reset-password", limiter, async (req, res) => {

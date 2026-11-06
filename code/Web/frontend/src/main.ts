@@ -54,6 +54,9 @@ function passwordField(
 ) {
   return `<label for="${id}">${label}</label><div class="password"><input id="${id}" name="${id}" type="password" autocomplete="${autocomplete}" placeholder="${min === 12 ? "Tối thiểu 12 ký tự" : "Nhập mật khẩu của bạn"}" required minlength="${min}" maxlength="128"><button type="button" class="reveal" aria-label="Hiện mật khẩu" aria-pressed="false" data-for="${id}">Hiện</button></div>`;
 }
+function recoveryFields() {
+  return `<div class="form-options"><label class="check"><input type="checkbox" id="admin-recovery"> Tôi là quản trị viên</label></div><div id="recovery-identity"><label for="name">Họ và tên</label><input id="name" name="name" autocomplete="name" required maxlength="200" placeholder="Họ tên đã đăng ký"><label for="phone">Số điện thoại</label><input id="phone" name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="25" placeholder="Số điện thoại liên hệ"><label for="accountId">Mã tài khoản / nhân viên / khách hàng</label><input id="accountId" name="accountId" required maxlength="100" placeholder="Mã tài khoản được cấp"></div>`;
+}
 function render() {
   const titles = {
     login: "Chào mừng trở lại.",
@@ -64,15 +67,16 @@ function render() {
   const subtitles = {
     login: "Đăng nhập để tiếp tục với Smart Parking.",
     forgot:
-      "Nhập email đã đăng ký. Chúng tôi sẽ gửi cho bạn liên kết để đặt lại mật khẩu.",
+      "Nhập email, họ tên, số điện thoại và mã tài khoản để yêu cầu đặt lại mật khẩu. Quản trị viên chỉ cần email.",
     reset: "Chọn mật khẩu mới để bảo vệ tài khoản của bạn.",
     account: "Tài khoản của bạn đã sẵn sàng để sử dụng.",
   };
   document.title = `${mode === "account" ? "Tài khoản" : "Đăng nhập"} · Smart Parking`;
-  root.innerHTML = `<main class="layout"><aside class="story"><a class="brand" href="/">${icon}<span>smart<span class="brand-light">parking</span><sup>®</sup></span></a><div class="story-body"><div class="eyebrow"><span></span> DI CHUYỂN THÔNG MINH HƠN</div><h1>Điểm đỗ an tâm.<br>Hành trình<br><em>thảnh thơi.</em></h1><p>Kết nối bãi đỗ, đơn giản hóa quản lý.<br>Một không gian cho mọi hành trình.</p><div class="parking-art" aria-hidden="true"><div class="lane lane-one"></div><div class="lane lane-two"></div><div class="bay b1"><i></i></div><div class="bay b2"><i></i></div><div class="bay b3"></div><div class="bay b4"><i></i></div><div class="park-sign">P</div><div class="route"></div><div class="art-label"><span>✓</span> Sẵn sàng cho hành trình của bạn</div></div></div><div class="story-foot"><span>THÔNG MINH. AN TOÀN. TIỆN LỢI.</span><span>01 — 03</span></div></aside><section class="content"><div class="top-note">HỆ THỐNG QUẢN LÝ BÃI ĐỖ XE <span>●</span></div><div class="form-wrap"><div class="section-tag">${mode === "account" ? "KẾT NỐI THÀNH CÔNG" : "TÀI KHOẢN CỦA BẠN"}</div><h2>${titles[mode]}</h2><p class="subtitle">${subtitles[mode]}</p><div id="feedback" role="status" aria-live="polite" tabindex="-1" hidden></div>${mode === "account" ? `<div class="account"><div class="avatar">✓</div><h3 id="account-name"></h3><p id="account-email"></p><span class="role">${user ? roleNames[user.role] : ""}</span><p class="account-note">Bạn đã xác thực thành công vào hệ thống Smart Parking.</p><button class="primary" id="logout">Đăng xuất ${arrow}</button></div>` : `<form id="auth-form">${mode !== "reset" ? '<label for="email">Địa chỉ email</label><input id="email" name="email" type="email" autocomplete="username" placeholder="ban@example.com" required maxlength="254">' : ""}${mode !== "forgot" ? passwordField(mode === "reset" ? "Mật khẩu mới" : "Mật khẩu", "password", mode === "reset" ? "new-password" : "current-password", mode === "reset" ? 12 : 1) : ""}${mode === "reset" ? passwordField("Xác nhận mật khẩu", "confirm", "new-password", 12) : ""}${mode === "login" ? '<div class="form-options"><label class="check"><input type="checkbox" name="remember"> Ghi nhớ đăng nhập</label><button type="button" class="text-button" id="forgot">Quên mật khẩu?</button></div>' : ""}<button class="primary" type="submit">${mode === "login" ? "Đăng nhập" : mode === "forgot" ? "Gửi liên kết khôi phục" : "Lưu mật khẩu mới"} ${arrow}</button>${mode !== "login" ? '<button type="button" class="back" id="back">← Quay lại đăng nhập</button>' : ""}</form>${mode === "login" ? '<div class="help"><span class="help-icon">i</span><p>Chưa có tài khoản?<br><span>Liên hệ quản trị viên bãi đỗ để được cấp quyền truy cập.</span></p></div>' : ""}`}</div><footer><span>© ${new Date().getFullYear()} Smart Parking</span><span class="secure"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1 2 3v4c0 4 6 7 6 7s6-3 6-7V3L8 1Z" stroke="currentColor"/><path d="m5 7 2 2 4-4" stroke="currentColor"/></svg> Kết nối được bảo mật</span></footer></section></main>`;
+  root.innerHTML = `<main class="layout"><aside class="story"><a class="brand" href="/">${icon}<span>smart<span class="brand-light">parking</span><sup>®</sup></span></a><div class="story-body"><div class="eyebrow"><span></span> DI CHUYỂN THÔNG MINH HƠN</div><h1>Điểm đỗ an tâm.<br>Hành trình<br><em>thảnh thơi.</em></h1><p>Kết nối bãi đỗ, đơn giản hóa quản lý.<br>Một không gian cho mọi hành trình.</p><div class="parking-art" aria-hidden="true"><div class="lane lane-one"></div><div class="lane lane-two"></div><div class="bay b1"><i></i></div><div class="bay b2"><i></i></div><div class="bay b3"></div><div class="bay b4"><i></i></div><div class="park-sign">P</div><div class="route"></div><div class="art-label"><span>✓</span> Sẵn sàng cho hành trình của bạn</div></div></div><div class="story-foot"><span>THÔNG MINH. AN TOÀN. TIỆN LỢI.</span><span>01 — 03</span></div></aside><section class="content"><div class="top-note">HỆ THỐNG QUẢN LÝ BÃI ĐỖ XE <span>●</span></div><div class="form-wrap"><div class="section-tag">${mode === "account" ? "KẾT NỐI THÀNH CÔNG" : "TÀI KHOẢN CỦA BẠN"}</div><h2>${titles[mode]}</h2><p class="subtitle">${subtitles[mode]}</p><div id="feedback" role="status" aria-live="polite" tabindex="-1" hidden></div>${mode === "account" ? `<div class="account"><div class="avatar">✓</div><h3 id="account-name"></h3><p id="account-email"></p><p id="account-id"></p><span class="role">${user ? roleNames[user.role] : ""}</span><p class="account-note">Bạn đã xác thực thành công vào hệ thống Smart Parking.</p><button class="primary" id="logout">Đăng xuất ${arrow}</button></div>` : `<form id="auth-form">${mode !== "reset" ? '<label for="email">Địa chỉ email</label><input id="email" name="email" type="email" autocomplete="username" placeholder="ban@example.com" required maxlength="254">' : ""}${mode === "forgot" ? recoveryFields() : ""}${mode !== "forgot" ? passwordField(mode === "reset" ? "Mật khẩu mới" : "Mật khẩu", "password", mode === "reset" ? "new-password" : "current-password", mode === "reset" ? 12 : 1) : ""}${mode === "reset" ? passwordField("Xác nhận mật khẩu", "confirm", "new-password", 12) : ""}${mode === "login" ? '<div class="form-options"><label class="check"><input type="checkbox" name="remember"> Ghi nhớ đăng nhập</label><button type="button" class="text-button" id="forgot">Quên mật khẩu?</button></div>' : ""}<button class="primary" type="submit">${mode === "login" ? "Đăng nhập" : mode === "forgot" ? "Gửi yêu cầu đặt lại mật khẩu" : "Lưu mật khẩu mới"} ${arrow}</button>${mode !== "login" ? '<button type="button" class="back" id="back">← Quay lại đăng nhập</button>' : ""}</form>${mode === "login" ? '<div class="help"><span class="help-icon">i</span><p>Chưa có tài khoản?<br><span>Liên hệ quản trị viên bãi đỗ để được cấp quyền truy cập.</span></p></div>' : ""}`}</div><footer><span>© ${new Date().getFullYear()} Smart Parking</span><span class="secure"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1 2 3v4c0 4 6 7 6 7s6-3 6-7V3L8 1Z" stroke="currentColor"/><path d="m5 7 2 2 4-4" stroke="currentColor"/></svg> Kết nối được bảo mật</span></footer></section></main>`;
   if (user && mode === "account") {
     document.querySelector("#account-name")!.textContent = user.name;
     document.querySelector("#account-email")!.textContent = user.email;
+    document.querySelector("#account-id")!.textContent = `Mã tài khoản: ${user.id}`;
   }
   document.querySelector("#forgot")?.addEventListener("click", () => {
     mode = "forgot";
@@ -95,6 +99,15 @@ function render() {
       button.setAttribute("aria-label", show ? "Ẩn mật khẩu" : "Hiện mật khẩu");
     }),
   );
+  document.querySelector<HTMLInputElement>("#admin-recovery")?.addEventListener("change", (event) => {
+    const exempt = (event.currentTarget as HTMLInputElement).checked;
+    const fields = document.querySelector<HTMLDivElement>("#recovery-identity")!;
+    fields.hidden = exempt;
+    fields.querySelectorAll("input").forEach((input) => {
+      input.disabled = exempt;
+      input.required = !exempt;
+    });
+  });
   document.querySelector("#auth-form")?.addEventListener("submit", submit);
   document
     .querySelector<HTMLButtonElement>("#logout")
@@ -146,6 +159,9 @@ async function submit(event: Event) {
     } else if (mode === "forgot") {
       const result = await api("forgot-password", {
         email: String(data.get("email")).trim(),
+        name: String(data.get("name") || "").trim(),
+        phone: String(data.get("phone") || "").trim(),
+        accountId: String(data.get("accountId") || "").trim(),
       });
       feedback(result.message);
     } else {
@@ -164,7 +180,7 @@ async function submit(event: Event) {
   } finally {
     if (button.isConnected) {
       button.disabled = false;
-      button.innerHTML = `${mode === "login" ? "Đăng nhập" : mode === "forgot" ? "Gửi liên kết khôi phục" : "Lưu mật khẩu mới"} ${arrow}`;
+      button.innerHTML = `${mode === "login" ? "Đăng nhập" : mode === "forgot" ? "Gửi yêu cầu đặt lại mật khẩu" : "Lưu mật khẩu mới"} ${arrow}`;
       form.removeAttribute("aria-busy");
     }
   }
