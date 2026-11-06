@@ -11,6 +11,11 @@
 # Dependencies
 node_modules/
 
+# models (too heavy)
+code/model/Car model classification
+code/model/Empty parking spot
+code/model/Lisense plate
+
 # Environment variables & secrets
 .env
 
