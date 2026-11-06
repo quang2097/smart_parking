@@ -34,7 +34,7 @@ test("PostgreSQL authentication lifecycle", async () => {
   try {
     await pool.query(
       "INSERT INTO users(id,email,name,role,password_hash) VALUES($1,$2,$3,$4,$5)",
-      [id, email, "Integration test", "staff", await hashPassword(password)],
+      [id, email, "Integration test", "employee", await hashPassword(password)],
     );
     assert.equal((await request("me")).status, 401);
     const recovery = { email, name: "Integration test", phone: "0901234567", accountId: id };
@@ -43,14 +43,14 @@ test("PostgreSQL authentication lifecycle", async () => {
     assert.equal((await request("forgot-password", { ...recovery, accountId: randomUUID() })).status, 200);
     assert.equal((await pool.query("SELECT * FROM password_resets WHERE user_id=$1", [id])).rowCount, 0);
     assert.equal((await request("forgot-password", recovery)).status, 200);
-    const recoveryRow = (await pool.query("SELECT request_name,request_phone,request_account_id FROM password_resets WHERE user_id=$1", [id])).rows[0];
+    const recoveryRow = (await pool.query("SELECT request_name,request_phone,request_account_id FROM email_otps WHERE user_id=$1", [id])).rows[0];
     assert.deepEqual(recoveryRow, { request_name: recovery.name, request_phone: recovery.phone, request_account_id: id });
-    await pool.query("DELETE FROM password_resets WHERE user_id=$1", [id]);
+    await pool.query("DELETE FROM email_otps WHERE user_id=$1", [id]);
     await pool.query("UPDATE users SET role='admin' WHERE id=$1", [id]);
     assert.equal((await request("forgot-password", { email })).status, 200);
-    assert.equal((await pool.query("SELECT request_phone FROM password_resets WHERE user_id=$1", [id])).rows[0].request_phone, null);
-    await pool.query("DELETE FROM password_resets WHERE user_id=$1", [id]);
-    await pool.query("UPDATE users SET role='staff' WHERE id=$1", [id]);
+    assert.equal((await pool.query("SELECT request_phone FROM email_otps WHERE user_id=$1", [id])).rows[0].request_phone, null);
+    await pool.query("DELETE FROM email_otps WHERE user_id=$1", [id]);
+    await pool.query("UPDATE users SET role='employee' WHERE id=$1", [id]);
     assert.equal((await login("wrong password")).status, 401);
     assert.equal(
       (await request("login", { email: "' OR 1=1 --", password })).status,
@@ -64,7 +64,7 @@ test("PostgreSQL authentication lifecycle", async () => {
     assert.doesNotMatch(setCookie, /Max-Age/i);
     const cookie = setCookie.split(";")[0]!;
     const publicData = await logged.json();
-    assert.equal(publicData.user.role, "staff");
+    assert.equal(publicData.user.role, "employee");
     assert.equal(publicData.user.password_hash, undefined);
     assert.equal((await request("me", undefined, cookie)).status, 200);
     const remembered = await request(
@@ -87,12 +87,12 @@ test("PostgreSQL authentication lifecycle", async () => {
     );
     const newPassword = "Changed integration password!";
     assert.equal(
-      (await request("reset-password", { token, password: newPassword }))
+      (await request("reset-password", { token, password: newPassword, confirm: newPassword }))
         .status,
       200,
     );
     assert.equal(
-      (await request("reset-password", { token, password: newPassword }))
+      (await request("reset-password", { token, password: newPassword, confirm: newPassword }))
         .status,
       400,
     );
@@ -110,7 +110,7 @@ test("PostgreSQL authentication lifecycle", async () => {
       [digest(expired), id],
     );
     assert.equal(
-      (await request("reset-password", { token: expired, password })).status,
+      (await request("reset-password", { token: expired, password, confirm: password })).status,
       400,
     );
     const blocked = await fetch(base + "login", {

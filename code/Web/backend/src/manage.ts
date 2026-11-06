@@ -23,7 +23,7 @@ try {
         {
           accountExists: Boolean(user),
           seedNameConfigured: Boolean(process.env.SEED_NAME),
-          seedRoleValid: ["admin", "staff", "customer"].includes(
+          seedRoleValid: ["admin", "manager", "employee"].includes(
             process.env.SEED_ROLE || "admin",
           ),
           seedPasswordMeetsPolicy: validPassword(password),
@@ -54,8 +54,8 @@ try {
       throw new Error(
         "Set SEED_NAME in backend/.env (the display name, not the login identifier).",
       );
-    if (!["admin", "staff", "customer"].includes(role))
-      throw new Error("SEED_ROLE must be admin, staff or customer.");
+    if (!["admin", "manager", "employee"].includes(role))
+      throw new Error("SEED_ROLE must be admin, manager or employee.");
     const result = await pool.query(
       "INSERT INTO users(id,email,name,role,password_hash) VALUES($1,$2,$3,$4,$5) ON CONFLICT(email) DO NOTHING RETURNING id",
       [

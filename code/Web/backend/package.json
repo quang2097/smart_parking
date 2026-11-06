@@ -11,7 +11,7 @@
     "user:create": "tsx src/manage.ts user",
     "user:check": "tsx src/manage.ts check",
     "test": "tsx --test src/*.test.ts",
-    "test:integration": "tsx --test src/auth.integration.ts"
+    "test:integration": "tsx --test src/*.integration.ts"
   },
   "keywords": [],
   "author": "",
