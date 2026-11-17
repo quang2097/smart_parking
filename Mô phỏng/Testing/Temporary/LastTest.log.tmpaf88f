@@ -1,0 +1,331 @@
+Start testing: Nov 13 14:55 SE Asia Standard Time
+----------------------------------------------------------
+17/20 Testing: gridlock_seed_42
+17/20 Test: gridlock_seed_42
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_42" start time: Nov 13 14:55 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=15 arrived=4 recoveries=0
+t=60.0083 active=3 arrived=22 recoveries=3
+seed=42 rate=1 admitted=25 completed=25 remaining=0 recoveries=3 sim=84.1917 wall=61.8419s
+<end of output>
+Test time =  61.93 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_seed_42" end time: Nov 13 14:56 SE Asia Standard Time
+"gridlock_seed_42" time elapsed: 00:01:01
+----------------------------------------------------------
+
+19/20 Testing: gridlock_spawn_pressure
+19/20 Test: gridlock_spawn_pressure
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "3" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_spawn_pressure" start time: Nov 13 14:55 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=14 arrived=3 recoveries=1
+t=60.0083 active=3 arrived=18 recoveries=7
+seed=42 rate=3 admitted=21 completed=21 remaining=0 recoveries=7 sim=79.0333 wall=79.7778s
+<end of output>
+Test time =  79.87 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_spawn_pressure" end time: Nov 13 14:56 SE Asia Standard Time
+"gridlock_spawn_pressure" time elapsed: 00:01:19
+----------------------------------------------------------
+
+16/20 Testing: gridlock_seed_7
+16/20 Test: gridlock_seed_7
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "7" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_7" start time: Nov 13 14:56 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=16 arrived=2 recoveries=1
+t=60.0083 active=8 arrived=19 recoveries=5
+seed=7 rate=1 admitted=27 completed=27 remaining=0 recoveries=5 sim=88.0583 wall=82.3126s
+<end of output>
+Test time =  82.41 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_seed_7" end time: Nov 13 14:57 SE Asia Standard Time
+"gridlock_seed_7" time elapsed: 00:01:22
+----------------------------------------------------------
+
+20/20 Testing: gridlock_long_run
+20/20 Test: gridlock_long_run
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "1" "120"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_long_run" start time: Nov 13 14:55 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=15 arrived=4 recoveries=0
+t=60.0083 active=3 arrived=22 recoveries=3
+t=90.0083 active=13 arrived=24 recoveries=11
+t=120.008 active=12 arrived=38 recoveries=13
+seed=42 rate=1 admitted=50 completed=50 remaining=0 recoveries=14 sim=139.117 wall=150.362s
+<end of output>
+Test time = 150.57 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_long_run" end time: Nov 13 14:57 SE Asia Standard Time
+"gridlock_long_run" time elapsed: 00:02:30
+----------------------------------------------------------
+
+7/20 Testing: startup_routing
+7/20 Test: startup_routing
+Command: "D:/whateveraboutit/Traffic_Simulation/build/startup_routing_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"startup_routing" start time: Nov 13 14:57 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Actual startup preset avoids backward/sideways loops and follows accelerating leaders
+<end of output>
+Test time =   5.84 sec
+----------------------------------------------------------
+Test Passed.
+"startup_routing" end time: Nov 13 14:58 SE Asia Standard Time
+"startup_routing" time elapsed: 00:00:05
+----------------------------------------------------------
+
+3/20 Testing: signal_batch
+3/20 Test: signal_batch
+Command: "D:/whateveraboutit/Traffic_Simulation/build/signal_batch_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"signal_batch" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Frozen-clock batch planning and concurrent 4/36-vehicle queue movement passed
+<end of output>
+Test time =   2.68 sec
+----------------------------------------------------------
+Test Passed.
+"signal_batch" end time: Nov 13 14:58 SE Asia Standard Time
+"signal_batch" time elapsed: 00:00:02
+----------------------------------------------------------
+
+14/20 Testing: simulation
+14/20 Test: simulation
+Command: "D:/whateveraboutit/Traffic_Simulation/build/traffic_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"simulation" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+All geometry, SI motion, Gaussian dimensions, gap passing and signal tests passed
+<end of output>
+Test time =   3.25 sec
+----------------------------------------------------------
+Test Passed.
+"simulation" end time: Nov 13 14:58 SE Asia Standard Time
+"simulation" time elapsed: 00:00:03
+----------------------------------------------------------
+
+6/20 Testing: spawn_mix
+6/20 Test: spawn_mix
+Command: "D:/whateveraboutit/Traffic_Simulation/build/spawn_mix_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"spawn_mix" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Percentage mixes, zero/100 shares, sampling and live edits passed
+<end of output>
+Test time =   0.53 sec
+----------------------------------------------------------
+Test Passed.
+"spawn_mix" end time: Nov 13 14:58 SE Asia Standard Time
+"spawn_mix" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/20 Testing: telemetry
+12/20 Test: telemetry
+Command: "D:/whateveraboutit/Traffic_Simulation/build/telemetry_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"telemetry" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Stopped-time telemetry and parallel collision checks passed
+<end of output>
+Test time =   0.46 sec
+----------------------------------------------------------
+Test Passed.
+"telemetry" end time: Nov 13 14:58 SE Asia Standard Time
+"telemetry" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/20 Testing: route_refresh
+9/20 Test: route_refresh
+Command: "D:/whateveraboutit/Traffic_Simulation/build/route_refresh_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"route_refresh" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Moving destination reissue, momentum, deferred turns and fair scheduling passed
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Passed.
+"route_refresh" end time: Nov 13 14:58 SE Asia Standard Time
+"route_refresh" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/20 Testing: maneuver_queue
+10/20 Test: maneuver_queue
+Command: "D:/whateveraboutit/Traffic_Simulation/build/maneuver_queue_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"maneuver_queue" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Maneuver approach progress and reservation trimming passed
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"maneuver_queue" end time: Nov 13 14:58 SE Asia Standard Time
+"maneuver_queue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/20 Testing: map_authoring
+13/20 Test: map_authoring
+Command: "D:/whateveraboutit/Traffic_Simulation/build/map_authoring_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/annotated-map.png" "D:/whateveraboutit/Traffic_Simulation/build/map-roundtrip.png"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"map_authoring" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Map authoring checks passed
+<end of output>
+Test time =   0.19 sec
+----------------------------------------------------------
+Test Passed.
+"map_authoring" end time: Nov 13 14:58 SE Asia Standard Time
+"map_authoring" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/20 Testing: step_batch
+8/20 Test: step_batch
+Command: "D:/whateveraboutit/Traffic_Simulation/build/step_batch_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"step_batch" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+On-demand step duration, physics/signals/telemetry parity and cancellation passed
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"step_batch" end time: Nov 13 14:58 SE Asia Standard Time
+"step_batch" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/20 Testing: signal_approach
+4/20 Test: signal_approach
+Command: "D:/whateveraboutit/Traffic_Simulation/build/signal_approach_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"signal_approach" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Nearest-route red targeting, phase retargeting, curved approach and queue compaction passed
+<end of output>
+Test time =   0.20 sec
+----------------------------------------------------------
+Test Passed.
+"signal_approach" end time: Nov 13 14:58 SE Asia Standard Time
+"signal_approach" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/20 Testing: traffic_recovery
+2/20 Test: traffic_recovery
+Command: "D:/whateveraboutit/Traffic_Simulation/build/traffic_recovery_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"traffic_recovery" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Inclusive clearance and frozen-clock coordinated recovery passed
+<end of output>
+Test time =   0.16 sec
+----------------------------------------------------------
+Test Passed.
+"traffic_recovery" end time: Nov 13 14:58 SE Asia Standard Time
+"traffic_recovery" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/20 Testing: stuck_vehicles
+11/20 Test: stuck_vehicles
+Command: "D:/whateveraboutit/Traffic_Simulation/build/stuck_vehicle_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"stuck_vehicles" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Stuck leader removal, cooldown and signal protection passed
+<end of output>
+Test time =   0.22 sec
+----------------------------------------------------------
+Test Passed.
+"stuck_vehicles" end time: Nov 13 14:58 SE Asia Standard Time
+"stuck_vehicles" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/20 Testing: permissive_lights
+5/20 Test: permissive_lights
+Command: "D:/whateveraboutit/Traffic_Simulation/build/permissive_light_tests.exe"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"permissive_lights" start time: Nov 13 14:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Linked-exit red/yellow permissions, live queues and collision safety passed
+<end of output>
+Test time =   0.24 sec
+----------------------------------------------------------
+Test Passed.
+"permissive_lights" end time: Nov 13 14:58 SE Asia Standard Time
+"permissive_lights" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/20 Testing: mask
+15/20 Test: mask
+Command: "D:/whateveraboutit/Traffic_Simulation/build/mask_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "D:/whateveraboutit/Traffic_Simulation/tests/fixtures/mask-colors.png"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"mask" start time: Nov 13 14:57 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Bike route: 0.116048s, 11 waypoints
+Motorbike route: 0.0912547s, 11 waypoints
+Car route: 0.268287s, 19 waypoints
+Truck route: 0.336137s, 29 waypoints
+Bus route: 0.480652s, 44 waypoints
+Mixed traffic: 19 spawned, 5 completed, 7 replans in 17.5186 wall seconds
+Drain completed at 66.525s: all 19 arrived, 1 yielding recoveries
+<end of output>
+Test time =  27.90 sec
+----------------------------------------------------------
+Test Passed.
+"mask" end time: Nov 13 14:58 SE Asia Standard Time
+"mask" time elapsed: 00:00:27
+----------------------------------------------------------
+
+18/20 Testing: gridlock_seed_123
+18/20 Test: gridlock_seed_123
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "123" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_123" start time: Nov 13 14:56 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=17 arrived=4 recoveries=2
+t=60.0083 active=7 arrived=19 recoveries=11
+t=90.0083 active=6 arrived=20 recoveries=18
+t=120.008 active=3 arrived=23 recoveries=20
+seed=123 rate=1 admitted=26 completed=26 remaining=0 recoveries=20 sim=130.958 wall=112.774s
+<end of output>
+Test time = 112.87 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_seed_123" end time: Nov 13 14:58 SE Asia Standard Time
+"gridlock_seed_123" time elapsed: 00:01:52
+----------------------------------------------------------
+

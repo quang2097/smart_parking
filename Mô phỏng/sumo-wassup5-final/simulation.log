@@ -1,0 +1,16 @@
+Loading net-file from 'D:\whateveraboutit\Traffic_Simulation\build\sumo-wassup5-final\network.net.xml' ... done (7ms).
+Loading route-files incrementally from 'D:\whateveraboutit\Traffic_Simulation\build\sumo-wassup5-final\demand.rou.xml'
+Loading done.
+Simulation version 1.28.0 started with time: 0.00.
+Simulation ended at time: 1500.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 5.24s
+ Real time factor: 286.26
+ UPS: 57912.977099
+Vehicles:
+ Inserted: 126
+ Running: 0
+ Waiting: 0
+DijkstraRouter answered 1109 queries and explored 4.79 edges on average.
+DijkstraRouter spent 0.00s answering queries (0.00ms on average).

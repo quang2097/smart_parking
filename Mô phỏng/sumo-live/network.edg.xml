@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<edges>
+  <edge from="n2" to="n0" numLanes="2" width="3.5" speed="13.9" spreadType="center" shape="405.15,-29.2 565.75,-266.45 620.5,-430.7 810.3,-540.2" id="r0f" />
+  <edge from="n0" to="n3" numLanes="2" width="3.5" speed="13.9" spreadType="center" shape="810.3,-540.2 803.0,-408.8 759.2,-328.5 660.65,-204.4 554.8,-51.1" id="r1f" />
+  <edge from="n0" to="n1" numLanes="2" width="3.5" speed="13.9" spreadType="center" shape="810.3,-540.2 890.6,-357.7 1029.3,-266.45 1270.2,-105.85" id="r2f" />
+  <edge from="n1" to="n4" numLanes="2" width="3.5" speed="13.9" spreadType="center" shape="1270.2,-105.85 1350.5,-29.2" id="r3f" />
+  <edge from="n5" to="n0" numLanes="2" width="3.5" speed="13.9" spreadType="center" shape="1496.5,-102.2 1277.5,-266.45 1051.2,-438.0 810.3,-540.2" id="r4f" />
+  <edge from="n6" to="n1" numLanes="2" width="3.5" speed="13.9" spreadType="right" shape="1178.95,-25.55 1226.4,-80.3 1270.2,-105.85" id="r5f" />
+  <edge from="n1" to="n6" numLanes="2" width="3.5" speed="13.9" spreadType="right" shape="1270.2,-105.85 1226.4,-80.3 1178.95,-25.55" id="r5b" />
+  <edge from="n0" to="n7" numLanes="2" width="3.5" speed="13.9" spreadType="center" shape="810.3,-540.2 627.8,-620.5 416.1,-759.2 229.95,-883.3" id="r6f" />
+  <edge from="n8" to="n0" numLanes="2" width="3.5" speed="13.9" spreadType="center" shape="434.35,-883.3 627.8,-737.3 715.4,-667.95 810.3,-540.2" id="r7f" />
+  <edge from="n9" to="n0" numLanes="2" width="3.5" speed="13.9" spreadType="right" shape="32.85,-379.6 270.1,-492.75 474.5,-591.3 620.5,-584.0 810.3,-540.2" id="r8f" />
+  <edge from="n0" to="n9" numLanes="2" width="3.5" speed="13.9" spreadType="right" shape="810.3,-540.2 620.5,-584.0 474.5,-591.3 270.1,-492.75 32.85,-379.6" id="r8b" />
+  <edge from="n10" to="n0" numLanes="2" width="3.5" speed="13.9" spreadType="right" shape="1022.0,-883.3 941.7,-817.6 810.3,-719.05 773.8,-635.1 810.3,-540.2" id="r9f" />
+  <edge from="n0" to="n10" numLanes="2" width="3.5" speed="13.9" spreadType="right" shape="810.3,-540.2 773.8,-635.1 810.3,-719.05 941.7,-817.6 1022.0,-883.3" id="r9b" />
+  <edge from="n11" to="n0" numLanes="2" width="3.5" speed="13.9" spreadType="right" shape="1503.8,-671.6 1365.1,-876.0 1292.1,-876.0 1116.9,-697.15 1065.8,-598.6 810.3,-540.2" id="r10f" />
+  <edge from="n0" to="n11" numLanes="2" width="3.5" speed="13.9" spreadType="right" shape="810.3,-540.2 1065.8,-598.6 1116.9,-697.15 1292.1,-876.0 1365.1,-876.0 1503.8,-671.6" id="r10b" />
+</edges>

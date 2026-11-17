@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nodes>
+  <node id="n0" x="810.3" y="-540.2" type="traffic_light" radius="25" />
+  <node id="n1" x="1270.2" y="-105.85" type="priority" radius="25" />
+  <node id="n2" x="405.15" y="-29.2" type="priority" radius="25" />
+  <node id="n3" x="554.8" y="-51.1" type="priority" radius="25" />
+  <node id="n4" x="1350.5" y="-29.2" type="priority" radius="25" />
+  <node id="n5" x="1496.5" y="-102.2" type="priority" radius="25" />
+  <node id="n6" x="1178.95" y="-25.55" type="priority" radius="25" />
+  <node id="n7" x="229.95" y="-883.3" type="priority" radius="25" />
+  <node id="n8" x="434.35" y="-883.3" type="priority" radius="25" />
+  <node id="n9" x="32.85" y="-379.6" type="priority" radius="25" />
+  <node id="n10" x="1022.0" y="-883.3" type="priority" radius="25" />
+  <node id="n11" x="1503.8" y="-671.6" type="priority" radius="25" />
+</nodes>

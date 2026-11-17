@@ -1,0 +1,122 @@
+Start testing: Nov 13 15:15 SE Asia Standard Time
+----------------------------------------------------------
+19/22 Testing: gridlock_seed_42
+19/22 Test: gridlock_seed_42
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_42" start time: Nov 13 15:15 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=15 arrived=4 recoveries=0
+t=60.0083 active=2 arrived=23 recoveries=0
+seed=42 rate=1 admitted=25 completed=25 remaining=0 recoveries=0 sim=65.7083 wall=45.1109s
+<end of output>
+Test time =  45.18 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_seed_42" end time: Nov 13 15:16 SE Asia Standard Time
+"gridlock_seed_42" time elapsed: 00:00:45
+----------------------------------------------------------
+
+18/22 Testing: gridlock_seed_7
+18/22 Test: gridlock_seed_7
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "7" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_7" start time: Nov 13 15:16 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=16 arrived=2 recoveries=4
+t=60.0083 active=6 arrived=20 recoveries=4
+seed=7 rate=1 admitted=26 completed=26 remaining=0 recoveries=4 sim=71.525 wall=69.1412s
+<end of output>
+Test time =  69.23 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_seed_7" end time: Nov 13 15:17 SE Asia Standard Time
+"gridlock_seed_7" time elapsed: 00:01:09
+----------------------------------------------------------
+
+20/22 Testing: gridlock_seed_123
+20/22 Test: gridlock_seed_123
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "123" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_123" start time: Nov 13 15:17 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=16 arrived=4 recoveries=0
+t=60.0083 active=5 arrived=22 recoveries=3
+seed=123 rate=1 admitted=27 completed=27 remaining=0 recoveries=3 sim=82.825 wall=43.7746s
+<end of output>
+Test time =  43.84 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_seed_123" end time: Nov 13 15:18 SE Asia Standard Time
+"gridlock_seed_123" time elapsed: 00:00:43
+----------------------------------------------------------
+
+22/22 Testing: gridlock_long_run
+22/22 Test: gridlock_long_run
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "1" "120"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_long_run" start time: Nov 13 15:15 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=15 arrived=4 recoveries=0
+t=60.0083 active=12 arrived=23 recoveries=0
+t=90.0083 active=7 arrived=39 recoveries=2
+t=120.008 active=10 arrived=49 recoveries=3
+t=150.008 active=2 arrived=57 recoveries=3
+seed=42 rate=1 admitted=59 completed=59 remaining=0 recoveries=3 sim=153.275 wall=167.064s
+<end of output>
+Test time = 167.25 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_long_run" end time: Nov 13 15:18 SE Asia Standard Time
+"gridlock_long_run" time elapsed: 00:02:47
+----------------------------------------------------------
+
+21/22 Testing: gridlock_spawn_pressure
+21/22 Test: gridlock_spawn_pressure
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "3" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_spawn_pressure" start time: Nov 13 15:15 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=25 arrived=3 recoveries=0
+t=60.0083 active=9 arrived=28 recoveries=3
+seed=42 rate=3 admitted=37 completed=37 remaining=0 recoveries=3 sim=87.6167 wall=175.303s
+<end of output>
+Test time = 175.37 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_spawn_pressure" end time: Nov 13 15:18 SE Asia Standard Time
+"gridlock_spawn_pressure" time elapsed: 00:02:55
+----------------------------------------------------------
+
+17/22 Testing: mask
+17/22 Test: mask
+Command: "D:/whateveraboutit/Traffic_Simulation/build/mask_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "D:/whateveraboutit/Traffic_Simulation/tests/fixtures/mask-colors.png"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"mask" start time: Nov 13 15:18 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+Bike route: 0.0765161s, 11 waypoints
+Motorbike route: 0.0449423s, 11 waypoints
+Car route: 0.171526s, 19 waypoints
+Truck route: 0.138664s, 29 waypoints
+Bus route: 0.297691s, 44 waypoints
+Mixed traffic: 19 spawned, 5 completed, 7 replans in 25.4534 wall seconds
+Drain completed at 66.525s: all 19 arrived, 1 yielding recoveries
+<end of output>
+Test time =  34.75 sec
+----------------------------------------------------------
+Test Passed.
+"mask" end time: Nov 13 15:18 SE Asia Standard Time
+"mask" time elapsed: 00:00:34
+----------------------------------------------------------
+

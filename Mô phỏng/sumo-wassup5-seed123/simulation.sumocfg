@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <input>
+    <net-file value="network.net.xml" />
+    <route-files value="demand.rou.xml" />
+  </input>
+  <time>
+    <end value="900.0" />
+  </time>
+  <processing>
+    <step-length value=".1" />
+    <lateral-resolution value="-1" />
+    <collision.action value="warn" />
+    <collision.check-junctions value="true" />
+    <time-to-teleport value="-1" />
+    <device.rerouting.probability value="1" />
+    <device.rerouting.period value="20" />
+    <seed value="123" />
+  </processing>
+  <output>
+    <tripinfo-output value="tripinfo.xml" />
+    <summary-output value="summary.xml" />
+  </output>
+  <gui_only>
+    <gui-settings-file value="view.settings.xml" />
+  </gui_only>
+</configuration>

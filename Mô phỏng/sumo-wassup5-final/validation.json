@@ -1,0 +1,25 @@
+{
+  "completed": 126,
+  "max_waiting_seconds": 128.4,
+  "final": {
+    "time": "1499.90",
+    "loaded": "126",
+    "inserted": "126",
+    "running": "0",
+    "waiting": "0",
+    "ended": "126",
+    "arrived": "126",
+    "collisions": "0",
+    "teleports": "0",
+    "halting": "0",
+    "stopped": "0",
+    "meanWaitingTime": "0.09",
+    "meanTravelTime": "240.84",
+    "meanSpeed": "-1.00",
+    "meanSpeedRelative": "-1.00",
+    "discarded": "0",
+    "duration": "0"
+  },
+  "collisions": 0,
+  "teleports": 0
+}

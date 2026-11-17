@@ -1,0 +1,7 @@
+mode,seed,sim_seconds,offered,inserted,completed,active,source_queue,mean_stopped_s,wall_s,min_clearance_m,deleted,completed_at_60s,junction_entries,junction_entries_at_60s
+packed,7,90,80,80,80,0,0,2.80662,7.31023,0.35,0,62,80,77
+compact,7,90,80,80,80,0,0,2.71,8.84358,0.35,0,63,80,76
+packed,42,90,80,80,80,0,0,3.40462,11.8168,0.350005,0,62,80,75
+compact,42,90,80,80,80,0,0,3.03012,10.4752,0.35,0,63,80,79
+packed,123,90,80,80,80,0,0,3.40462,10.5097,0.350005,0,62,80,75
+compact,123,90,80,80,80,0,0,3.03012,10.0044,0.35,0,63,80,79

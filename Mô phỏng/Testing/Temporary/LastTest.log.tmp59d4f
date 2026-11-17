@@ -1,0 +1,48 @@
+Start testing: Nov 11 15:58 SE Asia Standard Time
+----------------------------------------------------------
+5/7 Testing: gridlock_seed_123
+5/7 Test: gridlock_seed_123
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "123" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_123" start time: Nov 11 15:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time = 180.01 sec
+----------------------------------------------------------
+Test Failed.
+"gridlock_seed_123" end time: Nov 11 16:01 SE Asia Standard Time
+"gridlock_seed_123" time elapsed: 00:03:00
+----------------------------------------------------------
+
+6/7 Testing: gridlock_spawn_pressure
+6/7 Test: gridlock_spawn_pressure
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "3" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_spawn_pressure" start time: Nov 11 15:58 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+<end of output>
+Test time = 179.96 sec
+----------------------------------------------------------
+Test Failed.
+"gridlock_spawn_pressure" end time: Nov 11 16:01 SE Asia Standard Time
+"gridlock_spawn_pressure" time elapsed: 00:02:59
+----------------------------------------------------------
+
+4/7 Testing: gridlock_seed_42
+4/7 Test: gridlock_seed_42
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_42" start time: Nov 11 16:01 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+seed=42 rate=1 admitted=17 completed=17 remaining=0 recoveries=17 sim=84.1417 wall=146.414s
+<end of output>
+Test time = 146.46 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_seed_42" end time: Nov 11 16:04 SE Asia Standard Time
+"gridlock_seed_42" time elapsed: 00:02:26
+----------------------------------------------------------
+

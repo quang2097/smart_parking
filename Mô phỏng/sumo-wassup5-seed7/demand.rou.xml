@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<routes>
+  <vTypeDistribution id="mixed">
+    <vType id="bike_0" vClass="bicycle" probability="0.00375" length="1.776970774039716" width="0.6153429453754954" accel="1.1728684602260273" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="4" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bike_1" vClass="bicycle" probability="0.00375" length="1.7716438419901934" width="0.5720994542903169" accel="1.1744037663094555" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="4" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bike_2" vClass="bicycle" probability="0.00375" length="1.900072564288769" width="0.6127244005237781" accel="1.32442548946676" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="4" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bike_3" vClass="bicycle" probability="0.00375" length="1.8224012454898584" width="0.6118430890384127" accel="1.222239199251408" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="4" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bike_4" vClass="bicycle" probability="0.00375" length="1.6500543727219252" width="0.6256575290629421" accel="1.2607661815073663" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="4" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bike_5" vClass="bicycle" probability="0.00375" length="1.844893623434575" width="0.5492590634445473" accel="0.9907334259269276" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="4" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bike_6" vClass="bicycle" probability="0.00375" length="1.7199346189673763" width="0.585954321728003" accel="1.2366535190198928" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="4" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bike_7" vClass="bicycle" probability="0.00375" length="1.7958679442538674" width="0.615629246952627" accel="1.1229318300150608" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="4" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="motorbike_0" vClass="motorcycle" probability="0.1" length="2.030870314921088" width="0.7137954066900724" accel="1.8677725304935715" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="motorbike_1" vClass="motorcycle" probability="0.1" length="2.1717530317333744" width="0.7194813274553609" accel="2.2394010475958015" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="motorbike_2" vClass="motorcycle" probability="0.1" length="1.9379667085517156" width="0.6741169436321329" accel="1.9311906641673664" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="motorbike_3" vClass="motorcycle" probability="0.1" length="1.9893578668461456" width="0.7221227560761252" accel="2.0496854507139384" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="motorbike_4" vClass="motorcycle" probability="0.1" length="1.9552645104767834" width="0.6665080690218169" accel="1.8958819379866922" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="motorbike_5" vClass="motorcycle" probability="0.1" length="2.1220921314899903" width="0.6717218750092258" accel="2.0489517494632152" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="motorbike_6" vClass="motorcycle" probability="0.1" length="2.042651897467416" width="0.6478589902798609" accel="2.009694871561192" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="motorbike_7" vClass="motorcycle" probability="0.1" length="2.130624359980707" width="0.6294972661351408" accel="1.935681229786866" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="0.7" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="car_0" vClass="passenger" probability="0.0175" length="4.37664938290235" width="1.7264465727806688" accel="1.6795824017918808" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="13.9" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="car_1" vClass="passenger" probability="0.0175" length="4.38629842311475" width="1.668180900856135" accel="1.7324553405586105" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="13.9" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="car_2" vClass="passenger" probability="0.0175" length="4.547253851760621" width="1.8851257613166672" accel="1.8304955861108165" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="13.9" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="car_3" vClass="passenger" probability="0.0175" length="4.479693607476635" width="1.8107346735315106" accel="1.392133106443" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="13.9" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="car_4" vClass="passenger" probability="0.0175" length="4.535397506797295" width="1.7449416972350658" accel="1.527567696060986" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="13.9" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="car_5" vClass="passenger" probability="0.0175" length="4.121746689653709" width="1.7129147105510245" accel="1.515020625181461" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="13.9" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="car_6" vClass="passenger" probability="0.0175" length="4.683544259476718" width="1.6171387157296193" accel="1.3667671114273814" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="13.9" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="car_7" vClass="passenger" probability="0.0175" length="4.452657241202392" width="1.9299014778740846" accel="1.6925595120599706" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="13.9" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="truck_0" vClass="truck" probability="0.00125" length="7.240022689227219" width="2.0978118203962515" accel="0.9321657494139924" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="truck_1" vClass="truck" probability="0.00125" length="7.7054952241054195" width="2.265625611176751" accel="0.9879634117277607" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="truck_2" vClass="truck" probability="0.00125" length="8.440714481672162" width="2.4188702256526184" accel="0.9221198859251319" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="truck_3" vClass="truck" probability="0.00125" length="8.173745123932854" width="2.5912804868317534" accel="0.9557125742929847" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="truck_4" vClass="truck" probability="0.00125" length="8.207459815590308" width="2.4657285088357477" accel="0.7588520529700536" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="truck_5" vClass="truck" probability="0.00125" length="8.512693407361636" width="2.5146122500195354" accel="0.9476661349619723" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="truck_6" vClass="truck" probability="0.00125" length="7.210449825785348" width="2.3239583969296396" accel="0.9758073234462733" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="truck_7" vClass="truck" probability="0.00125" length="7.27551429899147" width="2.377917332480875" accel="0.9917574904667064" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bus_0" vClass="bus" probability="0.0025" length="9.344405693494267" width="2.593212743804985" accel="0.9496767574615376" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bus_1" vClass="bus" probability="0.0025" length="9.924930624360108" width="2.438984018520566" accel="0.9584847892300637" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bus_2" vClass="bus" probability="0.0025" length="10.060196863101773" width="2.5374792283029555" accel="0.8404609890822844" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bus_3" vClass="bus" probability="0.0025" length="9.792631922053328" width="2.525002146368831" accel="0.9024119047392549" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bus_4" vClass="bus" probability="0.0025" length="9.55976795944028" width="2.513574631859185" accel="1.0318947816872472" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bus_5" vClass="bus" probability="0.0025" length="9.777586957422127" width="2.2344008175407404" accel="0.8878726618476198" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bus_6" vClass="bus" probability="0.0025" length="9.92549059817988" width="2.36424004204397" accel="1.0264293273219809" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+    <vType id="bus_7" vClass="bus" probability="0.0025" length="9.486531763042104" width="2.551270397380599" accel="0.7858510218833743" decel="4.5" emergencyDecel="9" sigma="0.1" tau="1.2" minGap="1.2" maxSpeed="10" speedFactor="normc(1,0.1,0.8,1.2)" lcStrategic="1" lcCooperative="1" lcSublane="0" lcAssertive="0.8" lcPushy="0" minGapLat="0.3" latAlignment="center" />
+  </vTypeDistribution>
+  <routeDistribution id="routes_r0f">
+    <route edges="r0f r10b" probability="1" />
+    <route edges="r0f r1f" probability="1" />
+    <route edges="r0f r2f r3f" probability="1" />
+    <route edges="r0f r2f r5b" probability="1" />
+    <route edges="r0f r6f" probability="1" />
+    <route edges="r0f r8b" probability="1" />
+    <route edges="r0f r9b" probability="1" />
+  </routeDistribution>
+  <flow id="flow_r0f" type="mixed" route="routes_r0f" begin="0" end="300.0" vehsPerHour="216.0" departLane="best" departSpeed="max" reroute="true" />
+  <routeDistribution id="routes_r10f">
+    <route edges="r10f r1f" probability="1" />
+    <route edges="r10f r2f r3f" probability="1" />
+    <route edges="r10f r2f r5b" probability="1" />
+    <route edges="r10f r6f" probability="1" />
+    <route edges="r10f r8b" probability="1" />
+    <route edges="r10f r9b" probability="1" />
+  </routeDistribution>
+  <flow id="flow_r10f" type="mixed" route="routes_r10f" begin="0" end="300.0" vehsPerHour="216.0" departLane="best" departSpeed="max" reroute="true" />
+  <routeDistribution id="routes_r4f">
+    <route edges="r4f r10b" probability="1" />
+    <route edges="r4f r1f" probability="1" />
+    <route edges="r4f r2f r3f" probability="1" />
+    <route edges="r4f r2f r5b" probability="1" />
+    <route edges="r4f r6f" probability="1" />
+    <route edges="r4f r8b" probability="1" />
+    <route edges="r4f r9b" probability="1" />
+  </routeDistribution>
+  <flow id="flow_r4f" type="mixed" route="routes_r4f" begin="0" end="300.0" vehsPerHour="216.0" departLane="best" departSpeed="max" reroute="true" />
+  <routeDistribution id="routes_r5f">
+    <route edges="r5f r3f" probability="1" />
+  </routeDistribution>
+  <flow id="flow_r5f" type="mixed" route="routes_r5f" begin="0" end="300.0" vehsPerHour="216.0" departLane="best" departSpeed="max" reroute="true" />
+  <routeDistribution id="routes_r7f">
+    <route edges="r7f r10b" probability="1" />
+    <route edges="r7f r1f" probability="1" />
+    <route edges="r7f r2f r3f" probability="1" />
+    <route edges="r7f r2f r5b" probability="1" />
+    <route edges="r7f r6f" probability="1" />
+    <route edges="r7f r8b" probability="1" />
+    <route edges="r7f r9b" probability="1" />
+  </routeDistribution>
+  <flow id="flow_r7f" type="mixed" route="routes_r7f" begin="0" end="300.0" vehsPerHour="216.0" departLane="best" departSpeed="max" reroute="true" />
+  <routeDistribution id="routes_r8f">
+    <route edges="r8f r10b" probability="1" />
+    <route edges="r8f r1f" probability="1" />
+    <route edges="r8f r2f r3f" probability="1" />
+    <route edges="r8f r2f r5b" probability="1" />
+    <route edges="r8f r6f" probability="1" />
+    <route edges="r8f r9b" probability="1" />
+  </routeDistribution>
+  <flow id="flow_r8f" type="mixed" route="routes_r8f" begin="0" end="300.0" vehsPerHour="216.0" departLane="best" departSpeed="max" reroute="true" />
+  <routeDistribution id="routes_r9f">
+    <route edges="r9f r10b" probability="1" />
+    <route edges="r9f r1f" probability="1" />
+    <route edges="r9f r2f r3f" probability="1" />
+    <route edges="r9f r2f r5b" probability="1" />
+    <route edges="r9f r6f" probability="1" />
+    <route edges="r9f r8b" probability="1" />
+  </routeDistribution>
+  <flow id="flow_r9f" type="mixed" route="routes_r9f" begin="0" end="300.0" vehsPerHour="216.0" departLane="best" departSpeed="max" reroute="true" />
+</routes>

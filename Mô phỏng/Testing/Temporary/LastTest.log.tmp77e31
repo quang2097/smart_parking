@@ -1,0 +1,21 @@
+Start testing: Nov 13 14:30 SE Asia Standard Time
+----------------------------------------------------------
+16/19 Testing: gridlock_seed_42
+16/19 Test: gridlock_seed_42
+Command: "D:/whateveraboutit/Traffic_Simulation/build/gridlock_tests.exe" "D:/whateveraboutit/Traffic_Simulation/examples/curved-mask.png" "42" "1" "45"
+Directory: D:/whateveraboutit/Traffic_Simulation/build
+"gridlock_seed_42" start time: Nov 13 14:30 SE Asia Standard Time
+Output:
+----------------------------------------------------------
+t=0.00833333 active=0 arrived=0 recoveries=0
+t=30.0083 active=15 arrived=4 recoveries=0
+t=60.0083 active=3 arrived=22 recoveries=3
+seed=42 rate=1 admitted=25 completed=25 remaining=0 recoveries=3 sim=84.1917 wall=62.7268s
+<end of output>
+Test time =  62.80 sec
+----------------------------------------------------------
+Test Passed.
+"gridlock_seed_42" end time: Nov 13 14:31 SE Asia Standard Time
+"gridlock_seed_42" time elapsed: 00:01:02
+----------------------------------------------------------
+

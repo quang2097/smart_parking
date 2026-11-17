@@ -1,0 +1,17 @@
+Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups.
+Loading net-file from 'D:\whateveraboutit\Traffic_Simulation\build\sumo-wassup5\network.net.xml' ... done (10ms).
+Loading route-files incrementally from 'D:\whateveraboutit\Traffic_Simulation\build\sumo-wassup5\demand.rou.xml'
+Loading done.
+Simulation started with time: 0.00.
+Simulation ended at time: 900.00.
+Reason: The final simulation step has been reached.
+Performance:
+ Duration: 223.31s
+ Real time factor: 4.03029
+ UPS: 1094.075922
+Vehicles:
+ Inserted: 126
+ Running: 0
+ Waiting: 0
+DijkstraRouter answered 931 queries and explored 4.69 edges on average.
+DijkstraRouter spent 0.00s answering queries (0.00ms on average).
