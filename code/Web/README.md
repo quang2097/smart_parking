@@ -1,5 +1,7 @@
 # Smart Traffic — Traffic Light Control
 
+The web proof of concept now includes **Quan sát giao thông Hà Nội**: select a road, select a camera, then view labelled local demo frames or an authorized HTTP snapshot/MJPEG source. Direct iHanoi access has not been verified. See [camera research, setup and limitations](CAMERAS.md).
+
 Node.js, TypeScript and PostgreSQL application with a Vietnamese interface. Admins manage accounts, intersections and signal timing. Users monitor intersections and change history. Authentication, email OTP recovery and password changes remain available.
 
 ## Local setup

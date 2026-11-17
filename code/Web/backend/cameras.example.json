@@ -1,0 +1,27 @@
+{
+  "roads": [
+    {
+      "id": "my-road",
+      "name": "Tuyến đường của bạn",
+      "location": "Vị trí camera được cấp quyền",
+      "cameras": [
+        {
+          "id": "my-camera-snapshot",
+          "name": "Camera 01",
+          "kind": "snapshot",
+          "source": "Camera của bạn / nhà cung cấp đã cho phép",
+          "url": "http://127.0.0.1:8090/snapshot.jpg",
+          "refreshSeconds": 10
+        },
+        {
+          "id": "my-camera-stream",
+          "name": "Camera 02 · MJPEG",
+          "kind": "mjpeg",
+          "source": "Camera của bạn / nhà cung cấp đã cho phép",
+          "url": "http://127.0.0.1:8090/video",
+          "authorizationEnv": "MY_CAMERA_AUTHORIZATION"
+        }
+      ]
+    }
+  ]
+}

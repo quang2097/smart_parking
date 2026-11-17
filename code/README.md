@@ -8,6 +8,8 @@ Authentication now also includes personal-information recovery requests, admin a
 
 Every diagrammed authentication use case has a named backend scenario and shared UI coverage. See [Web/TESTING.md](Web/TESTING.md) for the coverage matrix, prerequisites and commands.
 
+Web, desktop and Android also include Hanoi camera observation: choose a road and camera, then view labelled local demo frames or an authorized snapshot/MJPEG source. Both native apps use their existing session cookies for media and cancel playback on Stop or backgrounding. Real iHanoi feeds have not been connected. See [Web/CAMERAS.md](Web/CAMERAS.md).
+
 ## Start the backend
 
 Follow [Web setup](Web/README.md) for PostgreSQL, `.env`, migrations and account provisioning. In `Web/backend`, run `npm install` then `npm run dev`. API port: **3000**. Both native clients connect directly to this API, using native HTTP and its existing cookie authentication. Browser CORS/origin protection remains unchanged. Never copy database credentials into a client.

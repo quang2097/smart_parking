@@ -12,7 +12,9 @@
     "dist": "npm run build:ui && electron-builder --win nsis",
     "test": "node --test src/*.test.cjs",
     "test:smoke": "npm run build:ui && electron scripts/smoke.cjs --smoke-test",
-    "test:use-cases": "npm run test:smoke"
+    "test:use-cases": "npm run test:smoke",
+    "test:camera-web": "npm --prefix ../Web/frontend run build && electron scripts/camera-web-smoke.cjs",
+    "test:camera-native": "npm run build:ui && electron scripts/camera-web-smoke.cjs --native-camera-test --smoke-test"
   },
   "devDependencies": {
     "electron": "45.3.2",

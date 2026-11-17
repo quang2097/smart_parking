@@ -1,6 +1,7 @@
 import "./style.css";
 import { mountDashboard, stopDashboard } from "./traffic";
 import { request, mountConnection } from "./connection";
+import { mountCameraViewer, stopCameraViewer } from './cameras';
 import { mountRecovery } from './recovery';
 type User = {
   id: string;
@@ -56,6 +57,7 @@ function creationFields() {
 }
 function render() {
   stopDashboard();
+  stopCameraViewer();
   const changing = mode === "reset" || mode === "change";
   const titles = {
     login: "Chào mừng trở lại.",
@@ -86,6 +88,8 @@ function render() {
     root.querySelector(".layout")!.classList.add("dashboard-layout");
     root.querySelector(".account")!.insertAdjacentHTML("afterend", '<section id="traffic-dashboard" aria-label="Điều khiển giao thông"></section>');
     mountDashboard(document.querySelector("#traffic-dashboard")!, user.role, api);
+    root.querySelector('.account')!.insertAdjacentHTML('afterend', '<section id="camera-observation" aria-label="Quan sát giao thông Hà Nội"></section>');
+    mountCameraViewer(root.querySelector('#camera-observation')!, api);
     document.querySelector("#account-name")!.textContent = user.name;
     document.querySelector("#account-email")!.textContent = user.email;
     document.querySelector("#account-id")!.textContent = `Mã tài khoản: ${user.id}`;

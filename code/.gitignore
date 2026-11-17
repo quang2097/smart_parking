@@ -12,3 +12,4 @@ Android/android/app/src/main/assets/public/
 Android/android/app/src/main/assets/capacitor.config.json
 Android/android/app/src/main/assets/capacitor.plugins.json
 *.log
+Web/backend/cameras.local.json

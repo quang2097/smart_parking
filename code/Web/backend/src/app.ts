@@ -12,6 +12,7 @@ import { pool } from "./db.js";
 import { trafficRouter } from "./traffic.js";
 import { allowedOrigins } from "./origins.js";
 import { recoveryRouter } from "./recovery.js";
+import { cameraRouter } from './cameras.js';
 import {
   digest,
   hashPassword,
@@ -458,6 +459,7 @@ app.post("/api/auth/reset-password", limiter, async (req, res) => {
 });
 app.use('/api/auth', recoveryRouter(sessionToken));
 app.use("/api/traffic", trafficRouter(sessionToken));
+app.use('/api/cameras', cameraRouter(sessionToken));
 app.get("/api/health", async (_req, res) => {
   await pool.query("SELECT 1");
   res.json({ status: "ok" });

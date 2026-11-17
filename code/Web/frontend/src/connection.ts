@@ -1,4 +1,5 @@
-import { Capacitor, CapacitorHttp, CapacitorCookies } from '@capacitor/core';
+import { Capacitor, CapacitorHttp, CapacitorCookies, registerPlugin } from '@capacitor/core';
+const TrafficCamera = registerPlugin<{ setBackend(options: { base: string }): Promise<void>; stopMedia(): Promise<void> }>('TrafficCamera');
 
 type Result = { status: number; data: any };
 declare global {
@@ -6,10 +7,15 @@ declare global {
     desktopTraffic?: {
       request: (base: string, path: string, body?: unknown) => Promise<Result>;
       clearSession: () => Promise<void>;
+      stopCameraMedia: () => Promise<void>;
     };
   }
 }
 export const nativeClient = Boolean(window.desktopTraffic) || Capacitor.isNativePlatform();
+export async function cancelCameraMedia() {
+  if (window.desktopTraffic) await window.desktopTraffic.stopCameraMedia();
+  else if (Capacitor.isNativePlatform()) await TrafficCamera.stopMedia();
+}
 const storageKey = 'smart-traffic.backend';
 export function backendAddress() {
   return localStorage.getItem(storageKey) || (Capacitor.isNativePlatform() ? 'http://10.0.2.2:3000' : 'http://localhost:3000');
@@ -24,12 +30,16 @@ export function normalizeBackend(value: string) {
 export async function saveBackend(value: string) {
   const next = normalizeBackend(value);
   if (window.desktopTraffic) await window.desktopTraffic.clearSession();
-  else await CapacitorCookies.clearCookies({ url: backendAddress() });
+  else {
+    await CapacitorCookies.clearCookies({ url: backendAddress() });
+    await TrafficCamera.setBackend({ base: next });
+  }
   localStorage.setItem(storageKey, next);
 }
 export async function request(path: string, body?: unknown): Promise<Result> {
   if (window.desktopTraffic) return window.desktopTraffic.request(backendAddress(), path, body);
   if (Capacitor.isNativePlatform()) {
+    await TrafficCamera.setBackend({ base: normalizeBackend(backendAddress()) });
     const result = await CapacitorHttp.request({
       url: `${backendAddress()}${path}`,
       method: body === undefined ? 'GET' : 'POST',

@@ -1,5 +1,7 @@
 # Use-case tests
 
+UC09 (Hanoi traffic observation) is covered by `cameras.test.ts`, `cameras.integration.ts`, `npm run test:camera-web` and `npm run test:camera-native` in `Desktop`, and `npm run test:camera` in `Android`. Native tests verify actual login cookies, JPEG/MJPEG playback and upstream cancellation; Android includes a real background/resume check. See [camera verification and source configuration](CAMERAS.md).
+
 The eleven supplied diagrams represent seven distinct use cases. `backend/src/use-cases.integration.ts` gives each one a named scenario, UC01–UC07, and adds UC08 for the server-local temporary administrator. Each scenario uses a fresh Express app and rate limiter, real HTTP requests, PostgreSQL, randomly named accounts, and cleanup of its own records.
 
 Recovery tests run a loopback SMTP inbox from `backend/src/testing/smtp.ts`. They read the OTP from the email actually sent by Nodemailer, rather than inserting a known code or reset authorization to bypass verification. The fixture overrides SMTP configuration within its test process, so no email is sent to external addresses. Database timestamps are adjusted to test expiry and cooldown without waiting several minutes.
